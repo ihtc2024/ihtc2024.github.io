@@ -104,18 +104,20 @@
     </section>
     <section id="section3" class="my-5">
         <h2>Instances</h2>
-        <p>Instances are provided in JSON format with the fixed structure that is described in detail in the <a href="assets/files/ihtc2024_problem_specification.pdf#page=12" target="_blank">specification document</a>. Each instance is contained in a single file. We provide a public dataset composed of 30 instances, named i01, … i30, with a scheduling period ranging from 2 to 4 weeks, and a number of patients ranging from about 50 to about 500. In addition, we provide 5 test instances, test01, … test05 for testing and debugging purposes. For the test dataset, we also provide a solution for each specific instance.</p>
+        <p>Instances are provided in JSON format with the fixed structure that is described in detail in the <a href="assets/files/ihtc2024_problem_specification.pdf#page=13" target="_blank">specification document</a>. Each instance is contained in a single file. We provide a public dataset composed of 30 instances, named i01, … i30, with a scheduling period ranging from 2 to 4 weeks, and a number of patients ranging from about 50 to about 500. In addition, we provide 5 test instances, test01, … test05 for testing and debugging purposes. For the test dataset, we also provide a solution for each specific instance.</p>
 		
 		<h5>Test dataset</h5>
 		
 		<p>The test dataset can be downloaded <a href="assets/files/ihtc2024_test_dataset.zip" target="_blank">here</a>. Solutions for these instances can be found <a href="assets/files/ihtc2024_test_solutions.zip" target="_blank">here</a>.</p>
 		
 		<h5>Public dataset</h5>
-		
+		<div class="alert alert-warning" role="alert">
+		<p>The competition dataset is available <a href="assets/files/ihtc2024_competition_instances.zip" target="_blank">here</a> as a zip file.</p>
+		</div>
+		<!-- 
 		<div class="alert alert-danger" role="alert">
 		  Available on September 1, 2024.
-		</div>
-		
+		</div> -->
     </section>
 	<section id="section4" class="my-5">
         <h2>Validator</h2>
@@ -130,7 +132,7 @@
 	<section id="section5" class="my-5">
         <h2>File formats</h2>
 		<h5>Problem instance files</h5>
-        <p>The problem instances are provided as json files. A small toy example can be found <a href="assets/files/toy.json" target="_blank">here</a>. The header section in each file specifies general information such the total number of <span style="font-family: monospace;">days</span> in the scheduling period, the number of different nurse <span style="font-family: monospace;">skill levels</span>, the list of types of daily shifts <span style="font-family: monospace;">shift_types</span>, the enumeration of different <span style="font-family: monospace;">age groups</span> considered in the scheduling and the instance-specific weight set.</p>
+        <p>The problem instances are provided as json files. A small toy example can be found <a href="assets/files/toy.json" target="_blank">here</a>. The header section in each file specifies general information such the total number of <span style="font-family: monospace;">days</span> in the scheduling period, the number of different nurse <span style="font-family: monospace;">skill_levels</span>, the list of types of daily shifts <span style="font-family: monospace;">shift_types</span>, the enumeration of different <span style="font-family: monospace;">age_groups</span> considered in the scheduling and the instance-specific weight set.</p>
 		<pre><code class="language-json">		
 		"days": 7,
 		"skill_levels": 3,
@@ -157,7 +159,7 @@
 		...		
 		</code></pre>
 		
-		<p>The next section presents the list of occupants, each characterized by a unique id along with their gender group and age_group as well as the duration of their stay length_of_stay. Two arrays indicate the workload_produced, and the skill_level_required for each shift of their stay. Additionally, each occupant is linked to a room_id, specifying their assigned room.</p>
+		<p>The next section presents the list of occupants, each characterized by a unique <span style="font-family: monospace;">id</span> along with their <span style="font-family: monospace;">gender</span> group and <span style="font-family: monospace;">age_group</span> as well as the duration of their stay <span style="font-family: monospace;">length_of_stay</span>. Two arrays indicate the <span style="font-family: monospace;">workload_produced</span>, and the <span style="font-family: monospace;">skill_level_required</span> for each shift of their stay. Additionally, each occupant is linked to a <span style="font-family: monospace;">room_id</span>, specifying their assigned room.</p>
 		
 		<pre><code class="language-json">
 		"occupants": [
@@ -174,11 +176,11 @@
 		]
 		</code></pre>
 		
-		<p>Each patient, as per occupant, is identified by an id, assigned a gender group, an age_group, and their length_of_stay in the hospital. Information regarding the workload_produced, and the skill_level_required for each shift of their stay is also provided.</p>
+		<p>Each patient, as per occupant, is identified by an <span style="font-family: monospace;">id</span>, assigned a <span style="font-family: monospace;">gender</span> group, an <span style="font-family: monospace;">age_group</span>, and their <span style="font-family: monospace;">length_of_stay</span> in the hospital. Information regarding the <span style="font-family: monospace;">workload_produced</span>, and the <span style="font-family: monospace;">skill_level_required</span> for each shift of their stay is also provided.</p>
 
-		<p>The patient section includes additional details pertaining to scheduled surgeries. The "mandatory" field denotes whether a patient is required to be scheduled must be scheduled within the given period, while surgery_release_day indicates the earliest day for surgery (and hospital admission). For mandatory patients, the field surgery_due_day signifies the latest possible surgery date, while optional patients do not have this attribute. Further surgery details include the surgery_duration (in minutes) and the pre-assigned surgeon surgeon (surgeon_id).</p>
+		<p>The patient section includes additional details pertaining to scheduled surgeries. The <span style="font-family: monospace;">mandatory</span> field denotes whether a patient is required to be scheduled must be scheduled within the given period, while <span style="font-family: monospace;">surgery_release_day</span> indicates the earliest day for surgery (and hospital admission). For mandatory patients, the field <span style="font-family: monospace;">surgery_due_day</span> signifies the latest possible surgery date, while optional patients do not have this attribute. Further surgery details include the <span style="font-family: monospace;">surgery_duration</span> (in minutes) and the pre-assigned surgeon (<span style="font-family: monospace;">surgeon_id</span>).</p>
 
-		<p>Additionally, each patient is accompanied by a list of incompatible_room_ids which specifies all the rooms the patient cannot be assigned to.</p>
+		<p>Additionally, each patient is accompanied by a list of <span style="font-family: monospace;">incompatible_room_ids</span> which specifies all the rooms the patient cannot be assigned to.</p>
 		
 		<pre><code class="language-json">
 		"patients": [
@@ -202,7 +204,7 @@
 		 ]
 		</code></pre>
 		
-		<p>The nurses section comprises a list of individual nurses, each with their unique identifier id, skill_level, and the list of their working shifts. Each working shift includes the day of the shift, the shift type (shift), and the maximum workload max_load allowed for that shift.</p>
+		<p>The nurses section comprises a list of individual nurses, each with their unique identifier <span style="font-family: monospace;">id</span>, <span style="font-family: monospace;">skill_level</span>, and the list of their working shifts. Each working shift includes the <span style="font-family: monospace;">day</span> of the shift, the shift type (<span style="font-family: monospace;">shift</span>), and the maximum workload <span style="font-family: monospace;">max_load</span> allowed for that shift.</p>
 		
 		<pre><code class="language-json">
 		"nurses": [
@@ -227,7 +229,7 @@
 		]
 		</code></pre>
 		
-		<p>Each surgeon has an id and a max_surgery_time list specifying their availability (in minutes) on each day of the scheduling period. Similarly, each operating theater is identified by an id accompanied by an availabilitylist indicating the theater’s availability (in minutes) for each day of the scheduling period. Finally, to each room is associated an id and a capacity (constant during the entire scheduling period).</p>
+		<p>Each surgeon has an <span style="font-family: monospace;">id</span> and a <span style="font-family: monospace;">max_surgery_time</span> list specifying their availability (in minutes) on each day of the scheduling period. Similarly, each operating theater is identified by an <span style="font-family: monospace;">id</span> accompanied by an availability list indicating the theater’s <span style="font-family: monospace;">availability</span> (in minutes) for each day of the scheduling period. Finally, to each room is associated an <span style="font-family: monospace;">id</span> and a <span style="font-family: monospace;">capacity</span> (constant during the entire scheduling period).</p>
 		
 		
 		<pre><code class="language-json">

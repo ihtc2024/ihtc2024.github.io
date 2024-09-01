@@ -631,7 +631,7 @@ void IHTP_Output::AssignPatient(int p, int ad, int r, int t)
     {
       n = room_shift_nurse[r][s];
 	    if (n != -1)
-	    {// remind that patient data is relative to the admission, not absolute (s1 is s shifted to the admission of p)
+	    {// reminder that patient data is relative to the admission, not absolute (s1 is s shifted to the admission of p)
 		    s1 = s - ad * in.ShiftsPerDay();
 		    patient_shift_nurse[p][s1] = n;
         nurse_shift_load[n][s]+= in.PatientWorkloadProduced(p,s1);
@@ -661,7 +661,7 @@ void IHTP_Output::AssignNurse(int n, int r, int s)
   d = s/in.ShiftsPerDay();
 
   for (i = 0; i < room_day_patient_list[r][d].size(); i++)
-  { // remind that patient_shift_nurse is relative to the admission, not absolute (s1 is s shifted to the admission)
+  { // reminder that patient_shift_nurse is relative to the admission, not absolute (s1 is s shifted to the admission)
 	  p = room_day_patient_list[r][d][i];
     if(p<in.Patients())
     {
