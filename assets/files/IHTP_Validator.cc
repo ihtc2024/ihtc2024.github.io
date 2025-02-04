@@ -804,7 +804,6 @@ int IHTP_Output::PatientDelay() const
 int IHTP_Output::OpenOperatingTheater() const
 {
   int cost = 0;
-
   for (int t = 0; t < in.OperatingTheaters(); t++)
     for (int d = 0; d < in.Days(); d++)
        if (operatingtheater_day_patient_list[t][d].size() > 0)
