@@ -36,6 +36,9 @@
 				<li class="nav-item">
                     <a class="nav-link" href="#section7">Submission</a>
                 </li>
+				<li class="nav-item">
+					<a class="nav-link" href="#section8">Conferences</a>
+				</li>
                 <li class="nav-item">
                     <a class="nav-link" href="#section3">Instances</a>
                 </li>
@@ -86,14 +89,14 @@
 					<li>Submission of best solutions for the public instances</li>
 				</ul>
 			</li>
-			<li class="with-margin">April 1, 2025			
+			<li class="with-margin"><s>April 1, 2025</s> March 7,2025			
 				<ul>
 					<li>Announcement of the five finalists</li>
 					<li>Request of the finalists' code</li>
-					<li>Evaluation on the hidden dataset</li>
+					<li>Start of the evaluation on the hidden dataset</li>
 				</ul>
 			</li>
-			<li class="with-margin">May 1, 2025			
+			<li class="with-margin"><s>May 1, 2025</s> March 28, 2025			
 				<ul>
 					<li>Announcement of results to the finalists</li>
 				</ul>
@@ -124,6 +127,14 @@
 		<p> In case of multiple submissions by the same team, only the last one will be considered (please refrain from sending many submissions, and try to send directly the final version). <b> No submission will be accepted after the deadline.</b></p>
 		<p> At this stage, we do not require the source code, but please be ready to provide it (with suitable instructions) for possible verification. The code will be requested only to the finalists and will be treated as confidential.</p>
 	</section>
+	<section id="section8" class="my-5">
+		<h2>Conferences</h2>
+		<p> A dedicated session on IHTC-2024 will take place within the Automated Timetabling stream at <a href="https://euro2025leeds.uk/">EURO 2025</a> in Leeds (22–25 June).
+		The session is open to anyone who has worked on any aspect of solving the IHTC problem. Participants are welcome to submit an abstract and present their work, regardless of whether they reached the final or even successfully submitted their solutions within the IHTC-2024 deadline.</p>
+		<p> The deadline for abstract submission to EURO 2025 is March 8th (for more details, visit the <a href="https://euro2025leeds.uk/call-for-abstracts/">call for abstracts page</a>). For submissions to the IHTC-2024 session, please use the code: <u>dbd431da</u></p>
+		<p> We also aim to organize a dedicated session at <a href="https://www.ntnu.edu/orahs2025">ORAHS 2025</a> in Trondheim (6–11 July). If you are interested in presenting your work there, please <a href="mailto:ihtc2024@uniud.it?subject=ihtc2024 ORAHS session">let us know</a>. If there is enough interest, we will request one or more IHTC-2024 sessions from the organizers.</p>
+		<p> In this case, the deadline for abstract submission is April 7th, 2025 (for more details, visit the <a href="https://www.ntnu.edu/orahs2025/submissions">submissions page</a>).</p>
+	</section>
     <section id="section3" class="my-5">
         <h2>Instances</h2>
         <p>Instances are provided in JSON format with the fixed structure that is described in detail in the <a href="assets/files/ihtc2024_problem_specification.pdf#page=13" target="_blank">specification document</a>. Each instance is contained in a single file. We provide a public dataset composed of 30 instances, named i01, … i30, with a scheduling period ranging from 2 to 4 weeks, and a number of patients ranging from about 50 to about 500. In addition, we provide 10 test instances, test01, … test10 for testing and debugging purposes. For the test dataset, we also provide a solution for each specific instance.</p>
@@ -148,8 +159,7 @@
 		<p><code>./IHTP_Validator.exe toy.json sol-toy.json</code></p>
 		
 		<p>To get additional details on constraint violations and individual objectives, the keyword <code>verbose</code> can be added as a third parameter.</p>
-		
-		
+			
     </section>
 	<section id="section5" class="my-5">
         <h2>File formats</h2>
