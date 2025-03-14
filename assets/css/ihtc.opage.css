@@ -42,3 +42,22 @@ li.with-margin{
 	margin-top: 1em;
   }
 
+table, th, td {
+  border: 0.5px groove black;
+  border-collapse: collapse;
+}
+
+th, td {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 8px;
+	padding-right: 8px;
+  }
+
+.text_right{
+	text-align: right;
+}
+
+.text_left{
+	text-align: left;
+}
