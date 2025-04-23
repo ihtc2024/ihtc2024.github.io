@@ -8,20 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/ihtc.opage.css" rel="stylesheet">
 	<link href="assets/css/prism.css" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 	<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 	<script src="https://unpkg.com/@popperjs/core@2"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="assets/js/ihtc.opage.js" type="text/javascript"></script>	
 	<script src="assets/js/prism.js" type="text/javascript"></script>	
-	<!-- 
-	<style>
-		table, th, td {
-		  border: 1px solid black;
-		  border-collapse: collapse;
-		}
-	</style>
-	-->
 </head>
 
 <body>
@@ -60,6 +52,9 @@
                     <a class="nav-link" href="#section9">Results</a>
                 </li>
 				<li class="nav-item">
+                    <a class="nav-link" href="#section11">Ranking</a>
+                </li>
+				<li class="nav-item">
                     <a class="nav-link" href="#section5">File formats</a>
                 </li>
 				<li class="nav-item">
@@ -88,7 +83,7 @@
 
 		<p>The top three competitors will receive a cash prize (€1100 for first, €700 for second, €400 for third), as well as one free registration to the EURO 2025 conference. An additional prize of €200 is awarded for the best participant that uses only open-source software. There is no limitation on the size of the competing teams.</p>
 		<div class="alert alert-warning" role="alert">
-		<p>The results of the first phase are now available! You can view the list of <a href="#section10">finalists</a> as well as the <a href="#section9">best solutions</a> found on the public dataset.</p>
+		<p>The final results are now available! You can view the <a href="#section10"> winners</a>, the complete <a href="#section11"> rankings</a> and the <a href="#section9">best solutions</a> found on both the public and hidden datasets.</p>
 		</div>
 	</section>
     <section id="section2" class="my-5">
@@ -162,6 +157,10 @@
 		<div class="alert alert-warning" role="alert">
 		<p>The competition dataset is available <a href="assets/files/ihtc2024_competition_instances.zip" target="_blank">here</a> as a zip file.</p>
 		</div>
+		<h5>Hidden dataset</h5>
+		<div class="alert alert-warning" role="alert">
+			<p>The dataset used to evaluate the finalists solvers is now <a href="assets/files/ihtc2024_hidden_dataset.zip" target="_blank">available</a>.</p>
+		</div>
 		<!-- 
 		<div class="alert alert-danger" role="alert">
 		  Available on September 1, 2024.
@@ -179,10 +178,11 @@
 	<section id="section10" class="my-5">
 		<h2>Participants</h2>
 	<p>We are pleased to share that 32 teams submitted their solvers to the IHTC-2024 competition. We would like to thank all participating teams for their contributions.</p> 
-	<p>After collecting and validating the results, we are pleased to announce the finalists (listed in <u>alphabetical order</u>):</p>
+	<p>After collecting and validating the results, we are pleased to announce the final ranking of IHTC-2024:</p>
 	<table>
 		<thead>
 			<tr>
+				<th>Rank</th>
 				<th>Team Name</th>
 				<th>Affiliation</th>
 				<th>Team members</th>
@@ -191,12 +191,14 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>ORTEC</td>
+				<td>1</td>
+				<td>v777v</td>
 				<td>independent</td>
-				<td>Wouter Kool, Lotte Berghman, Martijn van Brink, Charlie Ye, Eva van Rooijen, Judith Mourits,Per Kampman</td>
+				<td>Venislav Varbanov </td>
 				<!--<td></td>		 -->
 			</tr>
 			<tr>
+				<td>2</td>
 				<td>SDU-IMADA</td>
 				<td>University of Southern Denmark</td>
 				<td>Ahmad Othman,Marco Chiarandini</td>
@@ -204,25 +206,29 @@
 				
 			</tr>
 			<tr>
+				<td>3</td>
 				<td>Twente</td>
 				<td>University of Twente</td>
 				<td>Daniela Guericke, Rolf van der Hulst, Asal Karimpour, Ieke Schrader, Matthias Walter</td>
 				<!--<td></td>		 -->
 			</tr>
 			<tr>
+				<td>4</td>
+				<td>ORTEC</td>
+				<td>independent</td>
+				<td>Wouter Kool, Lotte Berghman, Martijn van Brink, Charlie Ye, Eva van Rooijen, Judith Mourits,Per Kampman</td>
+				<!--<td></td>		 -->
+			</tr>
+			<tr>
+				<td>5</td>
 				<td>UGent Mippets</td>
 				<td>Ghent University</td>
 				<td>Dries Goossens, David Van Bulck, Samuel Bakker, Karel Devriesere,Lisa Garcia Tercero</td>
 				<!--<td></td>		 -->
 			</tr>
-			<tr>
-				<td>v777v</td>
-				<td>independent</td>
-				<td>Venislav Varbanov </td>
-				<!--<td></td>		 -->
-			</tr>
 	</tbody>
 	</table>
+	<p>We are also pleased to announce that Team SDU-IMADA is the winner of the open-source software prize.</p>
 	<p style="padding-top: 8px;" > Additionally, we acknowledge some of the other teams (listed in <u>alphabetical order</u>) that submitted their work within the deadline: </p>
 	<table>
 	<thead>
@@ -405,12 +411,251 @@
 		</tbody>
 	</table>
 	</section>
+	<div class="container" id="section11">
+		<section class="my-5">
+		<h2>Ranking</h2>
+		<p>In the following section, we report the full results (including the rankings) of both the first phase as well as the final. While the rankings of the first phase are anonymized, each team should be able to recognise their results. Rankings of the solvers for each instance were computed using the Python function <code>rank(ascending=True)</code>.</p> 
+		<h5>First phase</h5>
+		<p>The anonymized results of the first phase are available <a href="assets/files/ihtc2024_ph1_results.csv" target="_blank">here</a>. Cells containing score 100000000 indicate an unfeasible solution. The resulting instance-level rankings can be found <a href="assets/files/ihtc2024_ph1_inst_rank.csv" target="_blank">here</a>. An embedded version of the results is available below.
+		<details>
+		<summary>Expand results</summary>
+
+		  <button class="btn btn-primary" onclick="showIframe('iframe1')">Scores</button>
+		  <button class="btn btn-primary" onclick="showIframe('iframe2')">Instance Ranking</button>
+		  <button class="btn btn-primary" onclick="showIframe('iframe3')">Ranking</button>
+
+		  <div id="iframe1" class="iframe-container" style="display: none;">
+		    <iframe title="Scores" aria-label="Table" id="datawrapper-chart-3tMrW" src="https://datawrapper.dwcdn.net/3tMrW/1/" scrolling="no" frameborder="0" style="width: 100%; border: none;" height="903" data-external="1"></iframe>
+		  </div>
+	  
+		  <div id="iframe2" class="iframe-container" style="display: none;">
+		    <iframe title="Instance_Ranking" aria-label="Table" id="datawrapper-chart-kZbuc" src="https://datawrapper.dwcdn.net/kZbuc/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="1240" data-external="1"></iframe>
+		  </div>
+	  
+		  <div id="iframe3" class="iframe-container" style="display: none;">
+		    <iframe title="Ranking" aria-label="Table" id="datawrapper-chart-pshyZ" src="https://datawrapper.dwcdn.net/pshyZ/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 37% !important; border: none;" height="1262" data-external="1"></iframe>
+		  </div>
+		</details>
+		</p>
+		<h5>Final</h5>
+		<p>Each solver was run 10 times on each instance. <a href="assets/files/ihtc2024_fin_results.csv">Here</a>, you can find the scores obtained by each finalist along with the corresponding rankings. Below, you can find the mean rank per instance and the final overall ranking.</p>
+ 		<details>
+			<summary>Expand rankings</summary>
+			<button class="btn btn-primary" onclick="showIframe('iframe4')">Instance Mean Ranking</button>
+		  	<button class="btn btn-primary" onclick="showIframe('iframe5')">Ranking</button>
+
+			  <div id="iframe4" class="iframe-container" style="display: none;">
+				<iframe title="Avg. Instance Ranking" aria-label="Table" id="datawrapper-chart-mSwRZ" src="https://datawrapper.dwcdn.net/mSwRZ/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="1243" data-external="1"></iframe>
+			  </div>
+			  <div id="iframe5" class="iframe-container" style="display: none;">
+				<iframe title="Final Ranking" aria-label="Table" id="datawrapper-chart-Snq13" src="https://datawrapper.dwcdn.net/Snq13/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="263" data-external="1"></iframe>
+			  </div>
+		</details>
+		<script>
+		function showIframe(idToShow) {
+		  const containers = document.querySelectorAll('.iframe-container');
+		  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+		  const iframeContainer = document.getElementById(idToShow);
+		  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+		  // Regola l'altezza dell'iframe in base al contenuto
+		  const iframe = iframeContainer.querySelector('iframe');
+		  if (iframe) {
+		    iframe.onload = function () {
+		      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+		    };
+		  }
+		}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+		function showIframe(idToShow) {
+  const containers = document.querySelectorAll('.iframe-container');
+  containers.forEach(div => div.style.display = 'none'); // Nascondi tutti gli iframe
+
+  const iframeContainer = document.getElementById(idToShow);
+  iframeContainer.style.display = 'block'; // Mostra il contenitore selezionato
+
+  // Regola l'altezza dell'iframe in base al contenuto
+  const iframe = iframeContainer.querySelector('iframe');
+  if (iframe) {
+    iframe.onload = function () {
+      iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    };
+  }
+}
+	  
+		  window.addEventListener("message", function(event) {
+		    if (event.data["datawrapper-height"]) {
+		      for (let chartId in event.data["datawrapper-height"]) {
+		        let iframe = document.getElementById("datawrapper-chart-" + chartId);
+		        if (iframe) {
+		          iframe.style.height = event.data["datawrapper-height"][chartId] + "px";
+		        }
+		      }
+		    }
+		  });
+		</script>
+		<!--
+		<details>
+			<summary>Expand results</summary>
+		<div id="tables-container-phase1" style="width: 100%; overflow-x: auto;margin-bottom:20px ;"></div>
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+		<script src="assets/files/tables/tabs.js"></script>
+		</details>
+		
+		<h5>Final</h5>
+		<details>
+			<summary>Expand results</summary>
+		<div id="tables-container-final">
+		  </div>
+		</details>
+		-->
+	</section>
+	</div>
 	<div class="container" id="section9">
 		<section class="my-5">
 			<h2>Results</h2>
 			<p>Below, we report the best results per instance achieved by participants, adhering to the IHTC-2024 competition rules (10-minute timeout and maximum 4-threads parallelism).
 				Additionally, we provide the corresponding .json file containing the reported solutions for reference:</p>
-			<div class="row">
+				<h5>Public dataset</h5>
+				<div class="row">
 				<div class="col-md-4">
 					<table class="centerTable">
 						<thead>
@@ -595,12 +840,202 @@
 							<tr>
 								<td>i30</td>
 								<td class="text-right">37943</td>
-								<td><a href="assets/files/solutions/public/sol_i30.json">sol_30.json</a></td>
+								<td><a href="assets/files/solutions/public/sol_i30.json">sol_i30.json</a></td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
-			</div>
+				<h5>Hidden dataset</h5>
+				<div class="row">
+					<div class="col-md-4">
+						<table class="centerTable">
+							<thead>
+								<tr>
+									<th>Instance</th>
+									<th class="text-right">Cost</th>
+									<th>Solution</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>m01</td>
+									<td class="text-right">3384</td>
+									<td><a href="assets/files/solutions/hidden/sol_m01.json">sol_m01.json</a></td>
+								</tr>
+								<tr>
+									<td>m02</td>
+									<td class="text-right">12211</td>
+									<td><a href="assets/files/solutions/hidden/sol_m02.json">sol_m02.json</a></td>
+								</tr>
+								<tr>
+									<td>m03</td>
+									<td class="text-right">6697</td>
+									<td><a href="assets/files/solutions/hidden/sol_m03.json">sol_m03.json</a></td>
+								</tr>
+								<tr>
+									<td>m04</td>
+									<td class="text-right">3345</td>
+									<td><a href="assets/files/solutions/hidden/sol_m04.json">sol_m04.json</a></td>
+								</tr>
+								<tr>
+									<td>m05</td>
+									<td class="text-right">11956</td>
+									<td><a href="assets/files/solutions/hidden/sol_m05.json">sol_m05.json</a></td>
+								</tr>
+								<tr>
+									<td>m06</td>
+									<td class="text-right">28250</td>
+									<td><a href="assets/files/solutions/hidden/sol_m06.json">sol_m06.json</a></td>
+								</tr>
+								<tr>
+									<td>m07</td>
+									<td class="text-right">7329</td>
+									<td><a href="assets/files/solutions/hidden/sol_m07.json">sol_m07.json</a></td>
+								</tr>
+								<tr>
+									<td>m08</td>
+									<td class="text-right">14976</td>
+									<td><a href="assets/files/solutions/hidden/sol_m08.json">sol_m08.json</a></td>
+								</tr>
+								<tr>
+									<td>m09</td>
+									<td class="text-right">32967</td>
+									<td><a href="assets/files/solutions/hidden/sol_m09.json">sol_m09.json</a></td>
+								</tr>
+								<tr>
+									<td>m10</td>
+									<td class="text-right">26027</td>
+									<td><a href="assets/files/solutions/hidden/sol_m10.json">sol_m10.json</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="centerTable">
+							<thead>
+								<tr>
+									<th>Instance</th>
+									<th class="text-right">Cost</th>
+									<th>Solution</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>m11</td>
+									<td class="text-right">35030</td>
+									<td><a href="assets/files/solutions/hidden/sol_m11.json">sol_m11.json</a></td>
+								</tr>
+								<tr>
+									<td>m12</td>
+									<td class="text-right">11681</td>
+									<td><a href="assets/files/solutions/hidden/sol_m12.json">sol_m12.json</a></td>
+								</tr>
+								<tr>
+									<td>m13</td>
+									<td class="text-right">31189</td>
+									<td><a href="assets/files/solutions/hidden/sol_m13.json">sol_m13.json</a></td>
+								</tr>
+								<tr>
+									<td>m14</td>
+									<td class="text-right">13368</td>
+									<td><a href="assets/files/solutions/hidden/sol_m14.json">sol_m14.json</a></td>
+								</tr>
+								<tr>
+									<td>m15</td>
+									<td class="text-right">28727</td>
+									<td><a href="assets/files/solutions/hidden/sol_m15.json">sol_m15.json</a></td>
+								</tr>
+								<tr>
+									<td>m16</td>
+									<td class="text-right">17271</td>
+									<td><a href="assets/files/solutions/hidden/sol_m16.json">sol_m16.json</a></td>
+								</tr>
+								<tr>
+									<td>m17</td>
+									<td class="text-right">22542</td>
+									<td><a href="assets/files/solutions/hidden/sol_m17.json">sol_m17.json</a></td>
+								</tr>
+								<tr>
+									<td>m18</td>
+									<td class="text-right">7817</td>
+									<td><a href="assets/files/solutions/hidden/sol_m18.json">sol_m18.json</a></td>
+								</tr>
+								<tr>
+									<td>m19</td>
+									<td class="text-right">21790</td>
+									<td><a href="assets/files/solutions/hidden/sol_m19.json">sol_m19.json</a></td>
+								</tr>
+								<tr>
+									<td>m20</td>
+									<td class="text-right">5335</td>
+									<td><a href="assets/files/solutions/hidden/sol_m20.json">sol_m20.json</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-md-4">
+						<table class="centerTable">
+							<thead>
+								<tr>
+									<th>Instance</th>
+									<th class="text-right">Cost</th>
+									<th>Solution</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>m21</td>
+									<td class="text-right">25170</td>
+									<td><a href="assets/files/solutions/hidden/sol_m21.json">sol_m21.json</a></td>
+								</tr>
+								<tr>
+									<td>m22</td>
+									<td class="text-right">21330</td>
+									<td><a href="assets/files/solutions/hidden/sol_m22.json">sol_m22.json</a></td>
+								</tr>
+								<tr>
+									<td>m23</td>
+									<td class="text-right">18301</td>
+									<td><a href="assets/files/solutions/hidden/sol_m23.json">sol_m23.json</a></td>
+								</tr>
+								<tr>
+									<td>m24</td>
+									<td class="text-right">30873</td>
+									<td><a href="assets/files/solutions/hidden/sol_m24.json">sol_m24.json</a></td>
+								</tr>
+								<tr>
+									<td>m25</td>
+									<td class="text-right">33985</td>
+									<td><a href="assets/files/solutions/hidden/sol_m25.json">sol_m25.json</a></td>
+								</tr>
+								<tr>
+									<td>m26</td>
+									<td class="text-right">69730</td>
+									<td><a href="assets/files/solutions/hidden/sol_m26.json">sol_m26.json</a></td>
+								</tr>
+								<tr>
+									<td>m27</td>
+									<td class="text-right">28028</td>
+									<td><a href="assets/files/solutions/hidden/sol_m27.json">sol_m27.json</a></td>
+								</tr>
+								<tr>
+									<td>m28</td>
+									<td class="text-right">45913</td>
+									<td><a href="assets/files/solutions/hidden/sol_m28.json">sol_m28.json</a></td>
+								</tr>
+								<tr>
+									<td>m29</td>
+									<td class="text-right">48082</td>
+									<td><a href="assets/files/solutions/hidden/sol_m29.json">sol_m29.json</a></td>
+								</tr>
+								<tr>
+									<td>m30</td>
+									<td class="text-right">31649</td>
+									<td><a href="assets/files/solutions/hidden/sol_m30.json">sol_m30.json</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 		</section>
 	</div>
 	<section id="section5" class="my-5">
