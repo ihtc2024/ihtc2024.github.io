@@ -13,14 +13,14 @@
 Run the generator with:
 
 ```bash
-python generate.py [options]
+python generate.py [arguments]
 ```
 
-If no options are specified, a mix of random and fixed values are used and the generated instance is printed to `stdout`.
+If no arguments are specified, a mix of random and fixed values are used and the generated instance is printed to `stdout`.
 
 ---
 
-## Options
+## Arguments
 
 - `--output, -o` : Output file (JSON format). Prints to `stdout` if omitted.  
 - `--weeks, -w` : Scheduling horizon (in weeks). Default: randomly selected between 2 and 4. Any positive integer is allowed.  
