@@ -32,7 +32,7 @@ If no arguments are specified, a mix of random and fixed values are used and the
 - `--rooms, -r` : Number of rooms.  
 - `--skills, -k` : Number of skills (integer between 2 and 5).  
 - `--age_groups, -a` : Number of age groups (integer between 2 and 5).  
-- `--overwrite, -ow` : Overwrite the output file if it exists. If not specified and the file already exists, no file is generated.
+- `--overwrite, -ow` : Overwrite the output file if it already exists.
 
 ---
 
