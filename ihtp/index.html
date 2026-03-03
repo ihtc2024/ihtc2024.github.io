@@ -34,10 +34,13 @@
                     <a class="nav-link" href="#section2">Additional datasets</a>
                 </li>
 				<li class="nav-item">
-                    <a class="nav-link" href="#section3">Upper bounds</a>
+					<a class="nav-link" href="#section3">Generator</a>
+				</li>
+				<li class="nav-item">
+                    <a class="nav-link" href="#section4">Upper bounds</a>
                 </li>
 				<li class="nav-item">
-					<a class="nav-link" href="#section4">Visualizer</a>
+					<a class="nav-link" href="#section5">Visualizer</a>
 				</li>
             </ul>
         </div>
@@ -57,8 +60,17 @@
 					We have two additional datasets for the IHTP, one comprised of 9 small instances with known optimal solutions and another with 24 instances with longer decision horizons (between 5-8 weeks).
 					The small dataset is available <a href="/assets/files/ihtp_small.zip">here</a> and was designed that with the intention of evaluating the performance of non-exact methods. The larger dataset is available <a href="..//assets/files/ihtp_longer_horizon.zip">here</a>.
 		</div>
-        	<div class="container">
+        <div class="container">
 			<section id="section3" class="my-5">
+			<h2>Generator</h2>
+			<p>The IHTP instance generator is available as a zip <a href="/assets/files/generator/ihtc2024_generator.zip">here</a>.</p>
+			<p> The generator can be run with Python 3.2+ and invoked as follows:</p>
+			<pre><code class="language-bash">python generate.py [arguments]</code></pre>
+			<p> If no arguments are specified, a mix of random and fixed values are used and the generated instance is printed to `stdout`.</p>
+			<p> For the full list of parameters and more details about the generator, please refer to the <a href="https://github.com/ihtc2024/ihtc2024.github.io/blob/main/assets/files/generator/README.md">readme</a>.</p>
+		</div>
+        	<div class="container">
+			<section id="section4" class="my-5">
 			<h2>Upper bounds</h2>
 			<p>Below, we report the current upper bounds for the IHTP instances. These bounds are based on the best solutions found by both participants of the IHTC-2024 competition as well as other researchers. You can report a new
 			upper bound by submitting a JSON-formatted solution to <a href="mailto:eugenia.zanazzo@uniud.it?subject=IHTP New UB Submission">Eugenia's email address.</a>
@@ -449,7 +461,7 @@
 			</section>
 		</div>
 	<div class="container">
-		<section id="section4" class="my-5">
+		<section id="section5" class="my-5">
 			<h2>Visualizer</h2>
 			<p> A research group at the Universidad de La Laguna (Spain) has kindly provided a tool for visualizing solutions to the IHTP.</p>
 			<p>	Detailed information about the tool’s functionalities, along with installation instructions, is available on the tool’s GitHub <a href="https://github.com/Nestor-DF/HealthPlanify">repository</a>
