@@ -53,5 +53,5 @@ The generator is designed to reduce the likelihood of producing infeasible insta
 
 ## Licensing
 
-All instances and materials are subject to the terms outlined in the [IHTC 2024 Licence](https://github.com/ihtc2024/LICENSE).
+All instances and materials are subject to the terms outlined in the [IHTC 2024 Licence]([https://github.com/ihtc2024/LICENSE](https://github.com/ihtc2024/ihtc2024.github.io/blob/main/LICENCE.md).
 
