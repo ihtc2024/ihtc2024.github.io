@@ -51,3 +51,7 @@ All remaining parameters were sampled randomly.
 
 The generator is designed to reduce the likelihood of producing infeasible instances; however, **feasibility is not guaranteed**.
 
+## Licensing
+
+All instances and materials are subject to the terms outlined in the [IHTC 2024 Licence](https://github.com/ihtc2024/LICENSE).
+
